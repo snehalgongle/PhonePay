@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.snake.phonepay.data.model.api.User" />
+
+        <variable
+            name="mainListVm"
+            type="com.snake.phonepay.ui.main.MainListViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="10"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:id="@+id/wifilistname"
+            fontPath="fonts/Roboto-Medium.ttf"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:text="@{user.login}"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+</layout>

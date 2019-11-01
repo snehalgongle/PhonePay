@@ -94,6 +94,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     private void observerResponse() {
         mainViewModel.userResponse.observe(this, user -> {
             Log.d(this.getClass().getSimpleName(), "observerResponse: " + user.get(0).getLogin());
+            mainListViewModel.usersItemList.addAll(user);
             adapter.notifyDataSetChanged();
         });
         mainViewModel.errorResponse.observe(this, this::handleApiError);
